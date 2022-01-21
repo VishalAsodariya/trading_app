@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trading_app/Onbording.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-      ),
-      home: const MyHomePage(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(),
+      home: const Onbording(),
     );
   }
 }
