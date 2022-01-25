@@ -1,6 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:slider_button/slider_button.dart';
+import 'package:trading_app/home.dart';
 
 class Onbording extends StatefulWidget {
   const Onbording({Key? key}) : super(key: key);
@@ -24,13 +25,16 @@ class _OnbordingState extends State<Onbording> {
               )),
         ),
         child: Container(
-          padding: EdgeInsets.only(left: 30),
+          padding: EdgeInsets.only(left: 40),
           child: Row(
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.2,
+                  ),
                   Text(
                     "Manage",
                     style: TextStyle(
@@ -42,7 +46,7 @@ class _OnbordingState extends State<Onbording> {
                   Text(
                     "crypto",
                     style: TextStyle(
-                      color: Colors.cyan,
+                      color: Color(0xFF00ef9e),
                       fontSize: 60,
                       fontFamily: 'Ubuntu',
                     ),
@@ -71,33 +75,38 @@ class _OnbordingState extends State<Onbording> {
                       fontFamily: 'Ubuntu',
                     ),
                   ),
-                  Center(
-                    child: Row(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(right: 20),
-                          alignment: Alignment.bottomCenter,
-                          child: FloatingActionButton(
-                            onPressed: () {},
-                            child: Icon(Icons.arrow_forward),
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(15.0))),
-                          ),
-                          // ElevatedButton(
-                          //   onPressed: () {},
-                          //   child: Text("data"),
-                          // ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.2,
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.only(right: 20),
+                        alignment: Alignment.bottomCenter,
+                        child: FloatingActionButton(
+                          backgroundColor: Color(0xFF00ef9e),
+                          foregroundColor: Colors.black,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()),
+                            );
+                          },
+                          child: Icon(Icons.arrow_forward),
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15.0))),
                         ),
-                        Text(
-                          "Get Started",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                          ),
-                        )
-                      ],
-                    ),
+                      ),
+                      Text(
+                        "Get Started",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      )
+                    ],
                   ),
                 ],
               ),
