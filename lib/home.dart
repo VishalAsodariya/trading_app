@@ -268,45 +268,45 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.all(22.0),
                 child: TransactionHistory(
-                    transName: 'transName',
-                    amount: 'amount',
-                    place: 'place',
-                    percentage: 'percentage'),
+                    transName: 'Sport Online',
+                    amount: '\$85.00',
+                    place: 'Niagara Falls, NY',
+                    percentage: '-25%'),
               ),
               Padding(
                 padding: const EdgeInsets.only(
                     left: 22.0, right: 22.0, bottom: 22.0),
                 child: TransactionHistory(
-                    transName: 'transName',
-                    amount: 'amount',
-                    place: 'place',
-                    percentage: 'percentage'),
+                    transName: 'Lure Store',
+                    amount: '\$64.99',
+                    place: 'Mc Donough, NY',
+                    percentage: '+8%'),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 22.0, right: 22.0),
-                child: TransactionHistory(
-                    transName: 'transName',
-                    amount: 'amount',
-                    place: 'place',
-                    percentage: 'percentage'),
-              ),
-              ElevatedButton(
-                  style: ButtonStyle(
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                      ),
+              Container(
+                margin: EdgeInsets.all(20),
+                child: ElevatedButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color(0xFF00ef9e),
+                    padding: EdgeInsets.only(
+                      left: 115,
+                      right: 115,
+                      top: 20,
+                      bottom: 20,
                     ),
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(Color(0xFF00ef9e)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18),
+                    ),
                   ),
                   onPressed: () {},
                   child: Text(
                     "Show History",
                     style: TextStyle(
                       color: Colors.black,
+                      fontSize: 20,
                     ),
-                  ))
+                  ),
+                ),
+              ),
             ],
           ),
         ),
